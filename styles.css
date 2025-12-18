@@ -328,4 +328,16 @@ nav button:hover {
   .history-table tr:hover {
     background: #222;
   }
+    /* --- Style untuk Header Kredit --- */
+  .header-credit-container {
+    text-align: center;       /* Membuat semua teks di dalamnya di tengah */
+    margin-top: 5px;          /* Jarak kecil dari header "Nurse Alert" di atasnya */
+    margin-bottom: 15px;      /* Jarak ke nav bar di bawahnya */
+  }
+  
+  .header-credit-container p {
+    margin: 0;                 /* JARAK NOL agar sangat rapat. Ganti dengan -2px jika ingin lebih rapat lagi. */
+    font-size: 0.9em;          /* Ukuran font yang sedikit lebih kecil */
+    color: #cccccc;            /* Warna abu-abu */
+  }
 }
