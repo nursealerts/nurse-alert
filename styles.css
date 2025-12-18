@@ -100,10 +100,21 @@ nav button:hover {
   opacity: 0.6;
   box-shadow: none;
 }
-/* Warna card berdasarkan type alert */
-.card.infus { border-left: 6px solid #f1c40f; }
-.card.medis { border-left: 6px solid #e74c3c; }
-.card.nonmedis { border-left: 6px solid #2ecc71; }
+/* TAMBAHKAN BAGIAN INI */
+.card.red {
+  border-left: 6px solid #e74c3c; /* Merah untuk infus */
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.card.yellow {
+  border-left: 6px solid #f1c40f; /* Kuning untuk medis */
+  background: rgba(241, 196, 15, 0.1);
+}
+
+.card.white {
+  border-left: 6px solid #ecf0f1; /* Putih untuk nonmedis */
+  background: rgba(236, 240, 241, 0.1);
+}
 
 .details {
   flex: 1;
