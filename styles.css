@@ -1,3 +1,4 @@
+/* --- GENERAL STYLES --- */
 body {
   font-family: 'Roboto', sans-serif;
   background: #0d0d0d;
@@ -7,32 +8,46 @@ body {
   line-height: 1.5;
 }
 
-/* --- Style untuk Header (Berlaku untuk Desktop & Mobile) --- */
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  color: #00ffff;
+}
+
+/* --- HEADER STYLES --- */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 h1 {
   font-size: 3rem;
-  text-align: center;
   color: #ffffff;
-  margin-bottom: 0; /* Kurangi agar rapat dengan kredit */
+  margin: 0 0 10px 0;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+.header-credit {
+  font-size: 0.8em;
+  color: #cccccc;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
 nav {
   display: flex;
-  justify-content: flex-start; /* PERBAIKAN: Tombol rata kiri, kecuali yang ada margin-left: auto */
-  margin-bottom: 24px;
+  justify-content: flex-start; /* Letakkan tombol di kiri */
+  width: 100%;
 }
 
 nav button {
-  margin: 0 12px;
+  margin: 0 12px 0 0;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -51,6 +66,17 @@ nav button:hover {
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
 }
 
+#logout-btn {
+  margin-left: auto; /* Dorong tombol logout ke kanan */
+  background: #e74c3c;
+  color: #fff;
+}
+
+#logout-btn:hover {
+  background: #c0392b;
+}
+
+/* --- CARD STYLES --- */
 .card {
   display: flex;
   justify-content: space-between;
@@ -65,26 +91,14 @@ nav button:hover {
 .card:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
-.card.active { /* Glow permanen untuk alert aktif */
+.card.active {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }
-.card.handled { /* Redup untuk alert ditangani */
+.card.handled {
   opacity: 0.6;
   box-shadow: none;
 }
-/* Tambahan: Warna card berdasarkan type alert */
-.card.red {
-  border-left: 6px solid #e74c3c;
-  background: rgba(231, 76, 60, 0.1);
-}
-.card.white {
-  border-left: 6px solid #ecf0f1;
-  background: rgba(236, 240, 241, 0.1);
-}
-.card.yellow {
-  border-left: 6px solid #f1c40f;
-  background: rgba(241, 196, 15, 0.1);
-}
+/* Warna card berdasarkan type alert */
 .card.infus { border-left: 6px solid #f1c40f; }
 .card.medis { border-left: 6px solid #e74c3c; }
 .card.nonmedis { border-left: 6px solid #2ecc71; }
@@ -108,10 +122,6 @@ nav button:hover {
 }
 .details .value {
   flex: 1;
-}
-
-.footer {
-  margin-left: 20px;
 }
 
 .card button {
@@ -138,7 +148,7 @@ nav button:hover {
   box-shadow: none;
 }
 
-/* Gaya untuk page history di desktop */
+/* --- HISTORY PAGE STYLES --- */
 .history-actions {
   margin: 16px 0;
   display: flex;
@@ -146,12 +156,10 @@ nav button:hover {
   gap: 12px;
   flex-wrap: wrap;
 }
-
 .history-actions label {
   font-weight: bold;
   color: #cccccc;
 }
-
 .history-actions input[type="date"] {
   padding: 8px 12px;
   border-radius: 6px;
@@ -160,7 +168,6 @@ nav button:hover {
   color: #ffffff;
   font-size: 1rem;
 }
-
 .history-actions button {
   padding: 10px 20px;
   border: none;
@@ -187,134 +194,81 @@ nav button:hover {
   border-radius: 8px;
   overflow: hidden;
 }
-
-.history-table th,
-.history-table td {
+.history-table th, .history-table td {
   padding: 12px 16px;
   text-align: left;
   border-bottom: 1px solid #333;
 }
-
 .history-table th {
   background: #222;
   color: #00ffff;
   font-weight: bold;
 }
-
 .history-table tr:nth-child(even) {
   background: #141414;
 }
-
 .history-table tr:hover {
   background: #222;
 }
 
-
-/* --- MEDIA QUERY UNTUK MOBILE (HANYA PERUBAHAN) --- */
+/* --- MEDIA QUERY FOR MOBILE --- */
 @media (max-width: 600px) {
   body {
     padding: 16px;
   }
-
-  /* Override untuk header di mobile */
-  header {
-    margin-bottom: 24px;
-  }
-
   h1 {
     font-size: 2.5rem;
     letter-spacing: 1px;
   }
-
-  /* Override untuk kredit di mobile */
-  .header-credit-container p {
-    font-size: 0.8em; /* Lebih kecil di mobile */
+  .header-credit {
+    font-size: 0.7em;
   }
-
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   nav button {
-    margin: 0 6px;
-    padding: 10px 20px;
+    margin: 5px;
+    flex-grow: 1; /* Biar tombol sama lebar */
+    text-align: center;
   }
-  
+  #logout-btn {
+    margin-left: 0; /* Reset margin di mobile */
+    order: 5; /* Taruh di paling bawah */
+    width: 100%;
+  }
   .card {
-    font-size: 1rem;
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
   }
-
   .details .row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 6px 0;
-  }
-  .details .label {
-    font-weight: bold;
-    min-width: 120px;
-    color: #cccccc;
-    margin-bottom: 0;
-  }
-  .details .colon {
-    margin: 0 8px;
-    color: #888888;
-    display: inline;
-  }
-  .details .value {
-    flex: 1;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .footer {
-    margin-left: 0;
-    margin-top: 16px;
-  }
-  .card.active {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-  }
-  
-  .history-actions {
-    margin: 16px 0;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
   }
-  
-  .history-actions label {
-    font-weight: bold;
-    color: #cccccc;
-    margin: 0;
-    text-align: left;
-    margin-left: 0 !important;
+  .details .label {
+    margin-bottom: 5px;
   }
-  
-  .history-actions input[type="date"] {
-    width: 90%;
-    max-width: 300px;
+  .details .colon {
+    display: none; /* Sembunyikan titik dua di mobile */
   }
-  
-  .history-actions button {
-    width: 90%;
-    max-width: 300px;
+  .card button {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
   }
-  
+  .history-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .history-actions label, .history-actions input, .history-actions button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
   .history-table {
     font-size: 0.9rem;
   }
-  
-  .history-table th,
-  .history-table td {
+  .history-table th, .history-table td {
     padding: 10px 12px;
-  }
-    /* --- Style untuk Header Kredit (Versi Sederhana & Aman) --- */
-  .header-credit {
-    text-align: center;
-    font-size: 0.8em;
-    color: #cccccc;
-    margin-top: 10px;
-    margin-bottom: 40px; /* PERBAIKAN: Tambah jarak agar tidak mepet tombol */
-    line-height: 1.3;
   }
 }
