@@ -29,7 +29,7 @@ function buildCard(room, key, alert) {
   const ts = new Date(alert.createdAt).toLocaleString();
   const card = document.createElement('div');
   // Tambah class warna berdasarkan type (merah/putih/kuning sesuai konsep tombol)
-  const colorClass = alert.type === 'infus' ? 'infus' : alert.type === 'nonmedis' ? 'nonmedis' : alert.type === 'medis' ? 'medis' : '';
+  const colorClass = alert.type === 'infus' ? 'red' : alert.type === 'nonmedis' ? 'white' : alert.type === 'medis' ? 'yellow' : '';
   card.className = `card ${colorClass} ${alert.status === 'Ditangani' ? 'handled' : 'active'}`;
 
   card.innerHTML = `
