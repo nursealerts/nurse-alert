@@ -27,7 +27,7 @@ h1 {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* PERBAIKAN: Tombol rata kiri, kecuali yang ada margin-left: auto */
   margin-bottom: 24px;
 }
 
@@ -310,11 +310,11 @@ nav button:hover {
   }
     /* --- Style untuk Header Kredit (Versi Sederhana & Aman) --- */
   .header-credit {
-    text-align: center;       /* Membuat teks rata tengah */
-    font-size: 0.8em;          /* Membuat font lebih kecil */
-    color: #cccccc;            /* Warna abu-abu */
-    margin-top: 10px;          /* Jarak dari "Nurse Alert" di atas */
-    margin-bottom: 20px;        /* Jarak ke nav bar di bawah */
-    line-height: 1.3;          /* Mengatur jarak antar baris */
+    text-align: center;
+    font-size: 0.8em;
+    color: #cccccc;
+    margin-top: 10px;
+    margin-bottom: 40px; /* PERBAIKAN: Tambah jarak agar tidak mepet tombol */
+    line-height: 1.3;
   }
 }
