@@ -10,19 +10,16 @@
 <body>
   <header>
     <h1>Nurse Alert</h1>
-    
-   <!-- GUNAKAN STRUKTUR YANG LEBIH SEDERHANA INI -->
     <div class="header-credit">
       System By:<br>
       Ahta 0009<br>
       Aksa 0007
     </div>
-    
     <nav>
       <button id="tab-dashboard">Dashboard</button>
       <button id="tab-history">History</button>
       <button id="clear-handled-btn">Bersihkan Status Card</button>
-      <button id="logout-btn" style="margin-left: auto; background: red; color: white;">Logout</button>
+      <button id="logout-btn">Logout</button>
     </nav>
   </header>
 
@@ -39,18 +36,16 @@
     <!-- HISTORY -->
     <section id="history" style="display:none;">
       <h2>Riwayat Alert</h2>
-
       <!-- Filter & Hapus History -->
       <div class="history-actions">
         <label for="filter-date">Filter tanggal:</label>
         <input type="date" id="filter-date">
         <button id="filter-btn">Tampilkan</button>
 
-        <label for="delete-date" style="margin-left:20px;">Hapus history tanggal:</label>
+        <label for="delete-date">Hapus history tanggal:</label>
         <input type="date" id="delete-date">
         <button id="delete-history-btn">Hapus</button>
       </div>
-
       <!-- Tabel History -->
       <table class="history-table">
         <thead>
