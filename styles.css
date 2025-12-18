@@ -34,7 +34,7 @@ h1 {
 }
 
 .header-credit {
-  font-size: 0.8em;
+  font-size: 1em;
   color: #cccccc;
   margin-bottom: 20px;
   line-height: 1.4;
@@ -221,7 +221,7 @@ nav button:hover {
     letter-spacing: 1px;
   }
   .header-credit {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   nav {
     flex-wrap: wrap;
