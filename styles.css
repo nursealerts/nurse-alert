@@ -330,14 +330,19 @@ nav button:hover {
   }
     /* --- Style untuk Header Kredit --- */
   .header-credit-container {
-    text-align: center;       /* Membuat semua teks di dalamnya di tengah */
+    text-align: center;       /* Tetap tengah horizontal */
+    display: flex;            /* Menggunakan flexbox untuk alignment */
+    align-items: center;      /* Tengah vertikal */
+    justify-content: center;  /* Tengah horizontal (opsional, tapi aman) */
     margin-top: 5px;          /* Jarak kecil dari header "Nurse Alert" di atasnya */
     margin-bottom: 15px;      /* Jarak ke nav bar di bawahnya */
+    height: 50px;             /* Tinggi container agar alignment vertikal terlihat jelas; sesuaikan jika perlu */
   }
   
   .header-credit-container p {
     margin: 0;                 /* JARAK NOL agar sangat rapat. Ganti dengan -2px jika ingin lebih rapat lagi. */
     font-size: 0.9em;          /* Ukuran font yang sedikit lebih kecil */
     color: #cccccc;            /* Warna abu-abu */
+    font-family: 'Roboto Mono', monospace;  /* Font unik/khas: Roboto Mono dari Google Fonts */
   }
 }
