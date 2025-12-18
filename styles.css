@@ -34,7 +34,9 @@ h1 {
 }
 
 .header-credit {
+  text-align: center;
   font-size: 1em;
+  font-style: italic;
   color: #cccccc;
   margin-bottom: 20px;
   line-height: 1.4;
@@ -218,6 +220,7 @@ nav button:hover {
   }
   h1 {
     font-size: 2.5rem;
+    font-style: italic;
     letter-spacing: 1px;
   }
   .header-credit {
