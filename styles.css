@@ -328,21 +328,16 @@ nav button:hover {
   .history-table tr:hover {
     background: #222;
   }
-    /* --- Style untuk Header Kredit --- */
-  .header-credit-container {
-    text-align: center;       /* Tetap tengah horizontal */
-    display: flex;            /* Menggunakan flexbox untuk alignment */
-    align-items: center;      /* Tengah vertikal */
-    justify-content: center;  /* Tengah horizontal (opsional, tapi aman) */
-    margin-top: 5px;          /* Jarak kecil dari header "Nurse Alert" di atasnya */
-    margin-bottom: 15px;      /* Jarak ke nav bar di bawahnya */
-    height: 50px;             /* Tinggi container agar alignment vertikal terlihat jelas; sesuaikan jika perlu */
+  /* --- Style untuk Header Kredit (Versi Lebih Spesifik) --- */
+  header .header-credit-container {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
   }
   
-  .header-credit-container p {
-    margin: 0;                 /* JARAK NOL agar sangat rapat. Ganti dengan -2px jika ingin lebih rapat lagi. */
-    font-size: 0.9em;          /* Ukuran font yang sedikit lebih kecil */
-    color: #cccccc;            /* Warna abu-abu */
-    font-family: 'Roboto Mono', monospace;  /* Font unik/khas: Roboto Mono dari Google Fonts */
+  header .header-credit-container p {
+    margin: 0; /* Atur jarak di sini, coba 0 dulu */
+    font-size: 0.8em; /* Saya buat lebih kecil agar perubahannya jelas terlihat */
+    color: #00ffff; /* Saya ubah ke cyan sementara, untuk memastikan CSS berjalan */
   }
 }
